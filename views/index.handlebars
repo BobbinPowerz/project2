@@ -1,51 +1,37 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <title>Fantasy Team</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
 
-
-<div id="wrapper">
-<h1>Eat-Da-Burger</h1>
-  <div id="left">
-    <h2>Ready to eat</h2>
-    <ol>
-      {{#each burgers}}
-        {{#unless this.devoured}}
-          <li>
-            {{this.burger_name}}
-            <!-- using method-override functionality that allows to attach POST method to the form -->
-            <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
-              <input type="hidden" name="devoured" value="true">
-              <button type="submit">Devour</button>
-            </form>            
-          </li>
-        {{/unless}}
-      {{/each}}
-    </ol>
-  </div>
-
-  <img id="pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUYAygtehN_Tuqq4r477HNcTDi_sgT6jNjup59eyQJrsJLgKajQA">
-
-  <div id="right">
-    <h2>All Gone.</h2>
-    <ol>
-      {{#each burgers}}
-        {{#if this.devoured}}
-          <li>
-            {{this.burger_name}}
-          </li>
-        {{/if}}
-      {{/each}}
-    </ol>
-  </div>
-</div>
-
-<div id="add-burger">
-  <div id="input">
-    <h2>Add your own burger:</h2>
-    <!-- using method-override functionality that allows to attach POST method to the form -->
-    <form class="create-update-form" action="burgers/create" method="POST">
-      <div class="form-group">
-        <label for="ca">Burger Name:</label>
-        <input type="text" id="ca" name="burger_name">
+<body>
+  <div class="container">
+    <div class= "row">
+      <div class= "col-xs-9 col-sm-9 col-lg-9">
+        <div id="panels" class="panel panel-success">
+        <div class="panel-heading"> 
+          <h2 class="panel-title">Pool of players</h2>
+        </div>
+        <div  class="panel-body content">
+          <div class="players"></div>
+        </div>
+        </div>
       </div>
-      <button id="add-burger-button" type="submit">Add Burger</button>
-    </form>
+    </div>
   </div>
+    <!--
+<div class="center">
+<h1>Hello</h1>
+<button class="signIn">Sign In</button>
 </div>
+-->
+    
+
+    <script type="application/javascript" src="js/script.js"></script>
+  </body>
+</html>
