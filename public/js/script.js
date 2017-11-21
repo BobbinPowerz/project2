@@ -2,7 +2,7 @@ var player;
 
 function createNewPlayer(data){
 
-	for (var i =0; i< data.length; i++){		
+	for (var i =0; i< 33; i++){		
 		player = $("<div class='player'>");
 		player.attr("playerID", data[i].id);
 		var playerPic = $("<img>");
