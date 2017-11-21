@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trivial Trivia Game</title>
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel ="stylesheet" href= "https://bootswatch.com/darkly/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+  <div class="container">
+      <div id="page1">
+            <div id="panels" class="panel panel-success">
+              <div class="panel-heading"> 
+              <h2 class="panel-title">Trivial Trivia Game</h2>
+              </div>
+              <div id="rules" class="panel-body content">
+              <h3 > Once you click Start, the timer starts running down and you will see all the trivia questions.
+              <br> If you answer all before the time is up, <br> click Done
+              </h3>
+               <p><a id="start" class="btn btn-default btn-lg btn-block">START</a></p>
+              </div>
+            </div>
+      </div>
+
+      <div id="page2">
+        <div id="panels" class="panel panel-success">
+          <div class="panel-heading">
+            <h2 class="panel-title">
+            Trivial Trivia Game
+            <br>
+             Time remaining: <span id="timer"></span>
+            </h2>
+          </div>
+          <div class="panel-body">
+
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                  <h3 class="panel-title">What is the capital of South Korea? 
+                  </h3>
+              </div>
+              <div class="panel-body">
+
+                <form>
+                  <label class="radio-inline">
+                  <input type="radio" name="one" value="not">P'yongyang
+                  </label>
+                  <label class="radio-inline">
+                  <input type="radio" name="one" value="cor">Seol
+                  </label>
+                  <label class="radio-inline">
+                  <input type="radio" name="one" value="not">Taipei
+                  </label>
+                </form>
+              </div>
+            </div>
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                  <h3 class="panel-title">Canary Islands are a group of islands that belong to which country?
+                  </h3>
+              </div>
+              <div class="panel-body">
+                <form>
+                  <label class="radio-inline">
+                  <input type="radio" name="two" value="cor">Spain
+                  </label>
+                  <label class="radio-inline">
+                  <input type="radio" name="two" value="not">Indonesia
+                  </label>
+                  <label class="radio-inline">
+                  <input type="radio" name="two" value="not">USA
+                  </label>
+                </form>
+              </div>
+            </div>
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                  <h3 class="panel-title"> In which country is mount Kilimanjaro located? 
+                  </h3>
+              </div>
+              <div class="panel-body">
+                <form>
+                  <label class="radio-inline">
+                  <input type="radio" name="three" value="not">Africa
+                  </label>
+                  <label class="radio-inline">
+                  <input type="radio" name="three" value="cor">Tanzania
+                  </label>
+                  <label class="radio-inline">
+                  <input type="radio" name="three" value="not">Sudan
+                  </label>
+                </form>
+              </div>
+            </div>
+             <div class="panel panel-info">
+              <div class="panel-heading">
+                  <h3 class="panel-title"> Mesopotamia is a nickname of which country?
+                  </h3>
+              </div>
+              <div class="panel-body">
+                <form>
+                  <label class="radio-inline">
+                  <input type="radio" name="four" value="not">Russia
+                  </label>
+                  <label class="radio-inline">
+                  <input type="radio" name="four" value="not">Turkey
+                  </label>
+                  <label class="radio-inline">
+                  <input type="radio" name="four" value="cor">Iraq
+                  </label>
+                </form>
+              </div>
+            </div>
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                  <h3 class="panel-title">The Acropolis can be found near which of the following cities?
+              </div>
+              <div class="panel-body">
+                <form>
+                  <label class="radio-inline">
+                  <input type="radio" name="five" value="not">Rome
+                  </label>
+                  <label class="radio-inline">
+                  <input type="radio" name="five" value="not">Berlin
+                  </label>
+                  <label class="radio-inline">
+                  <input type="radio" name="five" value="cor">Athens
+                  </label>
+                </form>
+              </div>
+            </div>            
+             <p><a id="done" class="btn btn-default btn-lg btn-block">START</a></p>
+          </div>
+        </div>
+      </div> 
+
+      <div id="page3">
+        <div id="panels" class="panel panel-success">
+          <div class="panel-heading">
+          <h2 class="panel-title">Trivial Trivia Game</h2>
+          </div>
+          <div id="score" class="panel-body content">
+            <h3 > All Done!</h3>
+            <h3>Correct Answers: <span id="correct"></span></h3>
+            <h3>Incorrect Answers: <span id="incorrect"></span></h3>
+            <h3>Unanswered: <span id="unanswered"></span></h3>
+          </div>
+                  <div class="card">
+                    <h3 class="card-header">Card header</h3>
+                    <div class="card-body">
+                      <h5 class="card-title">Special title treatment</h5>
+                      <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                    </div>
+                    <img style="height: 50px; width: 10%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="card-link">Card link</a>
+                      <a href="#" class="card-link">Another link</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                      2 days ago
+                    </div>
+                  </div>
+
+
+
+        </div>
+      </div>             
+ </div>
+</div> 
+<script src="assets/javascript/app.js"></script>
+</body>
+</html>
