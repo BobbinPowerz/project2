@@ -1,23 +1,19 @@
 {
   "development": {
     "username": "root",
-    "password": "a59508972",
+    "password": "",
     "database": "fantasyTeam",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "fantasyTeam",
+    "username": "null",
+    "password": "null",
+    "database": "DATABASE_URL",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "fantasyTeam",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "use_env_variable": "JAWSDB_URL"
   }
 }

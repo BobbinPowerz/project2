@@ -5,13 +5,18 @@ module.exports = function(sequelize, DataType){
 		password:DataType.STRING,
 		image: {
 			type: DataType.STRING,
-			defaultValue: "./images/defaultAvatar.png",
+			defaultValue: "images/defaultAvatar.png",
 		},
 		teamName: DataType.STRING,
 		teamMembers: DataType.STRING,
-		score: DataType.INTEGER,
-		heigestScore : DataType.INTEGER
-		
+		score: {
+			type:DataType.INTEGER,
+			defaultValue:0
+		},
+		latestScore: {
+			type:DataType.INTEGER,
+			defaultValue:0
+		}
 	});
 	return Users;
-}
+};
